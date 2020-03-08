@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Search</string>
+
+    <string name="result_search">결과 : </string>
+    <string name="result_searching">검색 중</string>
+    <string name="searching_hint">검색어를 입력해주세요</string>
+    <string name="searching_count" formatted="true">%d개 찾았습니다.</string>
+
+    <string name="network_check">인터넷 연결상태를 확인해 주세요</string>
+
+    <string name="tab_api">API</string>
+    <string name="tab_local">로컬</string>
+
+    <string name="connection_error">네트워크 연결이 지연되고 있습니다.\n 인터넷 연결을 확인해주세요</string>
+</resources>

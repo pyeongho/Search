@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="searchViewModel"
+            type="com.arch.search.viewmodel.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".act.MainActivity">
+
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/search"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:background="@color/gray"
+            android:id="@+id/searchStatus"
+            app:layout_constraintTop_toBottomOf="@id/search"
+            android:textSize="15dp"
+            tools:text="Results : 124"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:search_adapter="@{searchViewModel.adapter}"
+            app:add_scroll_listener="@{searchViewModel.getScrollListener()}"
+            app:layout_constraintTop_toBottomOf="@id/searchStatus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
